@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contador hasta infinito</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+    }
+    #contador {
+        font-size: 2em;
+        margin: 20px;
+    }
+</style>
+</head>
+<body>
+    <h1>Contador hasta infinito</h1>
+    <div id="contador">0</div>
+
+    <script>
+        // Función para contar infinitamente
+        function contarInfinito() {
+            let contador = 0;
+            setInterval(function() {
+                contador++;
+                document.getElementById('contador').textContent = contador;
+            }, 1000); // Cada segundo (1000 milisegundos)
+        }
+
+        // Llamar a la función al cargar la página
+        window.onload = contarInfinito;
+    </script>
+</body>
+</html>
